@@ -1,0 +1,18 @@
+name: 'Add Directory'
+description: 'Add a directory with specified name'
+inputs:
+  directoryName:
+    description: 'Name of Directory'
+    required: true
+    default: 'ThisIsADirectory'
+outputs:
+  time:
+    description: 'The time we greeted you'
+    value: 'Made a directory called: ${{ inputs.directoryName.value }}'
+runs:
+  using: 'composite'
+  steps:
+  - run: ${{ github.action_path }}/test.sh
+    shell: bash
+    env:
+      directoryName: DirFromEnvVars
