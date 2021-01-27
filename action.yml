@@ -7,9 +7,6 @@ inputs:
     default: 'ThisIsADirectory'
 - files:
     description: 'File names'
-    default:
-    - test
-    - test2 
 outputs:
   time:
     description: 'The time we greeted you'
