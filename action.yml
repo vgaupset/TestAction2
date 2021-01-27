@@ -15,4 +15,4 @@ runs:
   - run: ${{ github.action_path }}/test.sh
     shell: bash
     env:
-      directoryName: DirFromEnvVars
+      directoryName: ${{ inputs.directoryName.value }}
