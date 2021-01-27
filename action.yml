@@ -8,11 +8,11 @@ inputs:
 outputs:
   time:
     description: 'The time we greeted you'
-    value: 'Made a directory called: ${{ inputs.directoryName.value }}'
+    value: 'Made a directory called: ${{ inputs.directoryName }}'
 runs:
   using: 'composite'
   steps:
   - run: ${{ github.action_path }}/test.sh
     shell: bash
     env:
-      directoryName: ${{ inputs.directoryName.value }}
+      directoryName: ${{ inputs.directoryName}}
