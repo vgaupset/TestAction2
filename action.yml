@@ -1,15 +1,15 @@
 name: 'Add Directory'
 description: 'Add a directory with specified name'
 inputs:
-- directoryName:
+  directoryName:
     description: 'Name of Directory'
     required: true
     default: 'ThisIsADirectory'
-- fileName:
+  fileName:
     description: 'File names'
     required: true
     default: 'default'
-- fileContent:
+  fileContent:
     description: 'Content of the file'
     required: false
     default: 'Content'
