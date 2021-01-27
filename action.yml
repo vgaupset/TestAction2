@@ -1,10 +1,15 @@
 name: 'Add Directory'
 description: 'Add a directory with specified name'
 inputs:
-  directoryName:
+- directoryName:
     description: 'Name of Directory'
     required: true
     default: 'ThisIsADirectory'
+- files:
+    description: 'File names'
+    default:
+    - test
+    - test2 
 outputs:
   time:
     description: 'The time we greeted you'
@@ -15,4 +20,5 @@ runs:
   - run: ${{ github.action_path }}/test.sh
     shell: bash
     env:
-      directoryName: ${{ inputs.directoryName}}
+      directoryName: ${{ inputs.directoryName }}
+      files: ${{ inputs.files }}
